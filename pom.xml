@@ -20,7 +20,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>it.polimi.hegira</groupId>
   <artifactId>vdp</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <name>VirtualDataPartitions</name>
   
   	<packaging>jar</packaging>
