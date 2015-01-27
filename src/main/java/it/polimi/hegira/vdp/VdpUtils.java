@@ -18,7 +18,7 @@
  * Utility class for managing Virtual Data Partitions (VDPs)
  * and the keys contained by them.
  */
-package it.polimi.vdp;
+package it.polimi.hegira.vdp;
 
 import java.util.ArrayList;
 
@@ -76,5 +76,15 @@ public class VdpUtils {
 			extremes[1]=maxSeq;
 
 		return extremes;
+	}
+	
+	/**
+	 * Returns the total number of VDPs for a generic table.
+	 * @param maxSeq The total number of element contained by the table.
+	 * @param p The power (for the base 10) that allows to calculate the maximum number of VDPs.
+	 * @return The total number of VDPs for a generic table.
+	 */
+	public static int getTotalVDPs(int maxSeq, int p){
+		return (int) Math.ceil(maxSeq/Math.pow(10,p));
 	}
 }

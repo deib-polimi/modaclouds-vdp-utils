@@ -17,9 +17,10 @@
 /**
  * 
  */
-package it.polimi.vdp;
+package it.polimi.hegira.vdp;
 
 import static org.junit.Assert.*;
+import it.polimi.hegira.vdp.VdpUtils;
 
 import java.util.ArrayList;
 
@@ -32,7 +33,7 @@ import org.junit.Test;
 public class VdpUtilsTest {
 
 	/**
-	 * Test method for {@link it.polimi.vdp.VdpUtils#getVDP(int, int)}.
+	 * Test method for {@link it.polimi.hegira.vdp.VdpUtils#getVDP(int, int)}.
 	 */
 	@Test
 	public void testGetVDP() {
@@ -41,7 +42,7 @@ public class VdpUtilsTest {
 	}
 
 	/**
-	 * Test method for {@link it.polimi.vdp.VdpUtils#getElements(int, int, int)}.
+	 * Test method for {@link it.polimi.hegira.vdp.VdpUtils#getElements(int, int, int)}.
 	 */
 	@Test
 	public void testGetElements() {
@@ -54,7 +55,7 @@ public class VdpUtilsTest {
 	}
 
 	/**
-	 * Test method for {@link it.polimi.vdp.VdpUtils#getBucketExtremes(int, int, int)}.
+	 * Test method for {@link it.polimi.hegira.vdp.VdpUtils#getBucketExtremes(int, int, int)}.
 	 */
 	@Test
 	public void testGetVdpExtremes() {
@@ -68,4 +69,11 @@ public class VdpUtilsTest {
 		assertArrayEquals(dExt2, vdpExtremes2);
 	}
 
+	@Test
+	public void testGetTotalVDPs(){
+		int maxSeq = 221, p=1, totExpVDPs=23;
+		int totalVDPs = VdpUtils.getTotalVDPs(maxSeq, p);
+		//System.out.println(totExpVDPs+" == "+totalVDPs+" ??");
+		assertEquals(totExpVDPs,totalVDPs);
+	}
 }
